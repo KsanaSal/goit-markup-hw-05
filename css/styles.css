@@ -637,21 +637,26 @@ line-height: 1.192;
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+
+    transition: opacity 250ms var(--timing-function);
 }
 .backdrop.is-hidden {
-    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+}
 .modal {
+    display: flex;
+    justify-content: flex-end;
+
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    justify-content: flex-end;
 
     width: 528px;
     height: 581px;
@@ -662,21 +667,27 @@ line-height: 1.192;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms var(--timing-function);
 }
 
-.modal-button {
+.close-modal {
     display: flex;
     align-items: center;
 
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    cursor: pointer;
 
     background-color: var(--light-background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.close-modal {
+.icon-close-modal {
     width: 18px;
     height: 18px;
 }
+/* end modal window site */

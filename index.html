@@ -69,7 +69,7 @@
             для вашего бизнеса
           </h1>
 
-          <button class="button" type="button">Заказать услугу</button>
+          <button data-modal-open class="button" type="button">Заказать услугу</button>
         </div>
       </section>
 
@@ -515,14 +515,18 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden">
+
+    <!-- modal window -->
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="modal-button" type="button">
-            <svg class="close-modal">
+          <button data-modal-close class="close-modal" type="button">
+            <svg class="icon-close-modal">
               <use href="./images/sprite-icons.svg#icon-close-modal"></use>
             </svg>
           </button>
         </div>
       </div>
   </body>
+
+  <script src="./js/modal.js"></script>
 </html>
